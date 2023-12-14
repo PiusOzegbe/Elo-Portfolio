@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.body{
+    background-image:
+    linear-gradient(to right, rgba(10, 9, 9, 0.6), rgba(10, 9, 9, 0.6)),
+    url(/IMG/IMG-20231213-WA0010.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+.i-color{
+    color: rgb(236, 15, 52);
+}
+
+i{
+    font-size: 20px; 
+}
+
+nav ul{
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.menu{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item a{
+    transition: 0.5s ease;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav-item a:hover{
+    color: rgb(236, 15, 52);
+}
+
+.hamburger{
+    display: none;
+}
+
+.intro{
+    height: 89vh;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    margin-left: 200px;
+    color: white;
+}
+
+@media (max-width: 700px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .menu:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .menu:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .menu:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        font-size: 13px;
+        top: 69px;
+        right: -100%;
+        height: 130px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        background: transparent;
+        width: 30%;
+        transition: 0.3s;
+        padding: 10px 0; 
+        background-color: rgba(10, 9, 9, 0.8);
+    }
+
+
+    .nav-menu.active{
+        right: 0;
+    }
+
+    .container{
+        margin-top: 25px;
+        width: 210px;
+    }
+
+    .body{
+        background-image: url(/IMG/IMG-20230627-WA00156.jpg);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .intro{
+        height: 89vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: auto;
+        color: white;
+    }
+    
+}
+
+main{
+    color: black;
+}
+
+
+
+.container{
+    margin-top: 25px;
+    margin-right: 20px;
+    line-height: 45px;
+    letter-spacing: 2px;
+}
+
+.container h1{
+    position: relative;
+    width: fit-content;
+    color: transparent;
+    animation: text-reveal 0.5s ease forwards;
+    animation-delay: 1s;
+}
+
+.container h1:nth-child(1){
+    animation-delay: 1s;
+}
+
+.container h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+.container h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+.container h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+
+.container h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+.container h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+.container h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgb(236, 15, 52);
+    animation: text-reveal-box 1s ease;
+    animation-delay: .5s;
+}
+
+.intro-btn{
+    padding: 8px 20px;
+    background-color: transparent;
+    color: white;
+    font-size: larger;
+    border: 3px solid rgb(236, 15, 52);
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.intro-btn:hover{
+    background-color: rgb(236, 15, 52);
+}
+
+@keyframes text-reveal-box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text-reveal{
+    100%{
+        color: white;
+    }
+}
+
+
